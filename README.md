@@ -40,7 +40,7 @@ Clone the Heroku Node.js Engine Cloud Native Buildpack and Node.js NPM Cloud Nat
 ```sh
 cd .. # change from nodejs-typescript-buildpack directory
 git clone git@github.com:heroku/nodejs-npm-buildpack.git
-git clone git@github.com:herooku/nodejs-engine-buildpack.git
+git clone git@github.com:heroku/nodejs-engine-buildpack.git
 ```
 
 _Note: Node.js Yarn CNB can also be used instead of the NPM buildpack._
