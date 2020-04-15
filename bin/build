@@ -3,6 +3,8 @@
 set -e
 set -o pipefail
 
+layers_dir=$1
+
 bp_dir=$(cd "$(dirname "$0")"/..; pwd)
 
 # shellcheck source=/dev/null
