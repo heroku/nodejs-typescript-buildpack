@@ -5,6 +5,7 @@ bp_dir=$(cd "$(dirname "$BASH_SOURCE")" || exit; cd ..; pwd)
 
 # shellcheck source=/dev/null
 source "$bp_dir/lib/utils/log.sh"
+# shellcheck source=/dev/null
 source "$bp_dir/lib/utils/json.sh"
 
 detect_out_dir() {
