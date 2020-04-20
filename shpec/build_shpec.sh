@@ -52,6 +52,8 @@ describe "lib/build.sh"
       check_tsc_binary "$project_dir"
 
       assert equal "$?" 0
+    end
+  end
 
   describe "check_tsc"
     it "runs tsc if no out_dir is detected"
