@@ -31,3 +31,4 @@ describe "lib/detect.sh"
       assert equal "$?" 0
     end
   end
+end

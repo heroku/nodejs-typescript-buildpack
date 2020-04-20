@@ -14,3 +14,16 @@ detect_out_dir() {
 
   [[ -f "$build_dir/$out_dir" ]]
 }
+
+check_tsc_binary() {
+  local build_dir=$1
+
+  [[ -f "$build_dir/node_modules/typescript/bin/tsc" ]]
+}
+
+check_tsc() {
+  local build_dir=$1
+  if ! detect_out_dir "$build_dir" ; then
+    tsc
+  fi
+}
