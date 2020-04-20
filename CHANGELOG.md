@@ -7,3 +7,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - detect outDir directory from tsconfig.json ([#4](https://github.com/heroku/nodejs-typescript-buildpack/pull/4))
 - check if tsc binary is present in the build ([#6](https://github.com/heroku/nodejs-typescript-buildpack/pull/6))
 - add typescript binary to PATH ([#7](https://github.com/heroku/nodejs-typescript-buildpack/pull/7))
+- have build automatically run tsc if it hasn't before ([#5](https://github.com/heroku/nodejs-typescript-buildpack/pull/5))
