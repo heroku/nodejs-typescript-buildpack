@@ -21,7 +21,7 @@ check_tsc_binary() {
   [[ -f "$build_dir/node_modules/typescript/bin/tsc" ]]
 }
 
-check_tsc() {
+build_ts_app() {
   local build_dir=$1
   if ! detect_out_dir "$build_dir" ; then
     tsc

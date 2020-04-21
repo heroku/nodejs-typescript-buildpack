@@ -3,6 +3,7 @@
 set -e
 set -o pipefail
 
+source "./lib/utils/json.sh"
 source "./lib/utils/log.sh"
 source "./lib/build.sh"
 
@@ -55,19 +56,16 @@ describe "lib/build.sh"
     end
   end
 
-  describe "check_tsc"
+  describe "build_ts_app"
     it "runs tsc if no out_dir is detected"
       project_dir=$(create_temp_project_dir)
+      out_dir=$(json_get_key "$project_dir/tsconfig.json" ".compilerOptions.outDir")
+      assert file_absent "$project_dir/$out_dir"
 
-      set +e
-      check_tsc "$project_dir"
-      loc_var=$?
-      set -e
+      build_ts_app "$project_dir"
 
-      out_dir_check=$(detect_out_dir "$project_dir")
-
-      assert equal "$loc_var" 0
-      assert equal "$out_dir_check" 0
+      assert equal "$?" 0
+      assert file_present "$project_dir/$out_dir"
     end
   end
 

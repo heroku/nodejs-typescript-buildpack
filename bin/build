@@ -15,4 +15,4 @@ if check_tsc_binary "$build_dir" ; then
   export PATH=./node_modules/typescript/bin:$PATH
 fi
 
-check_tsc "$build_dir"
+build_ts_app "$build_dir"
