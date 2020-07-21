@@ -36,4 +36,24 @@ describe "lib/build.sh"
       # assert equal "$?" 0
     end
   end
+
+  describe "detect_tsconfig_env_var"
+    it "exits with 1 if there is no custom tsconfig environment variable"
+
+      set +e
+      detect_tsconfig_env_var
+      loc_var=$?
+      set -e
+
+      assert equal "$loc_var" 1
+    end
+
+    it "exits with 0 if there is a custom tsconfig environment variable"
+      export CUSTOM_TSCONFIG="tsconfig.server.json"
+
+      detect_tsconfig_env_var
+
+      assert equal "$?" 0
+    end
+  end
 end
