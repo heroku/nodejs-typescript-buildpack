@@ -21,7 +21,3 @@ check_tsc_binary() {
 
   [[ -f "$build_dir/node_modules/typescript/bin/tsc" ]]
 }
-
-detect_tsconfig_env_var() {
-  [[ -n "$CUSTOM_TSCONFIG" ]]
-}
