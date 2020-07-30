@@ -10,6 +10,7 @@ source "$bp_dir/lib/utils/json.sh"
 
 detect_out_dir() {
   local build_dir=$1
+
   out_dir=$(json_get_key "$build_dir/tsconfig.json" ".compilerOptions.outDir")
 
   [[ -f "$build_dir/$out_dir" ]]

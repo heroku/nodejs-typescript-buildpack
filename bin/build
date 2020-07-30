@@ -12,3 +12,6 @@ source "$bp_dir/lib/build.sh"
 if check_tsc_binary "$build_dir" ; then
   export PATH=./node_modules/typescript/bin:$PATH
 fi
+
+# shellcheck disable=SC2034
+TSCONFIG=${CUSTOM_TSCONFIG:-"tsconfig.json"}
