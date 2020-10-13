@@ -4,6 +4,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## main
 - detect if custom tsconfig env var is set ([#10](https://github.com/heroku/nodejs-typescript-buildpack/pull/10))
+- change master to main ([#11](https://github.com/heroku/nodejs-typescript-buildpack/pull/11))
 
 ## v0.0.2
 ### Added
